@@ -1,8 +1,9 @@
 # resolved.py
 
-resolved.py convert media film so that they can be imported by DaVinci Resolve easily (Registered Trademark of Blackmagic Design Pty Ltd)
+resolved.py convert media film so that they can be imported by DaVinci Resolve easily.
 
 The cheat cheat I used to write the script:
+
 https://alecaddd.com/davinci-resolve-ffmpeg-cheatsheet-for-linux/
 
 
