@@ -18,10 +18,11 @@ def run_command(cmd):
         sys.exit(1)
 
 
-def transcode_for_resolve(input_file):
+def transcode_for_resolve(input_file, output_file):
 
     filename, ext = os.path.splitext(input_file)
-    output_file = input_file.replace(ext,".mov")
+    if output_file is not None:
+        output_file = input_file.replace(ext,".mov")
 
     if os.path.exists(output_file):
         print("Skipping existing %s" % (output_file))
@@ -34,7 +35,8 @@ def transcode_for_resolve(input_file):
 
 parser = argparse.ArgumentParser(description="resolved.py convert media film so that they can be imported by DaVinci Resolve easily (Registered Trademark of Blackmagic Design Pty Ltd)")
 parser.add_argument("--input", type=str, default=".", help="input file")
+parser.add_argument("--output", type=str, default=None, help="input file")
 args = parser.parse_args()
 
 
-transcode_for_resolve(args.input)
+transcode_for_resolve(args.input, args.output)
