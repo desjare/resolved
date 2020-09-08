@@ -34,8 +34,8 @@ def transcode_for_resolve(input_file, output_file):
     run_command(cmd)
 
 parser = argparse.ArgumentParser(description="resolved.py convert media film so that they can be imported by DaVinci Resolve easily (Registered Trademark of Blackmagic Design Pty Ltd)")
-parser.add_argument("--input", type=str, default=".", help="input file")
-parser.add_argument("--output", type=str, default=None, help="input file")
+parser.add_argument("--input", type=str, default=".", help="input file", required=True)
+parser.add_argument("--output", type=str, default=None, help="input file", required=True)
 args = parser.parse_args()
 
 
